@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Rick y Morty</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor01"
+          aria-controls="navbarColor01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" id="personajesNav">Personajes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="crearPersonajeNav">Crear Personaje</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="contenedor-personajes p-5">
+      <div class="position-fixed">
+        <ul class="pagination">
+          <li class="page-item" id="prevPage">
+            <a class="page-link" href="#">&laquo;</a>
+          </li>
+
+          <li class="page-item" id="nextPage">
+            <a class="page-link" href="#">&raquo;</a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="personajes d-flex flex-wrap justify-content-center gap-5 p-5"
+      ></div>
+    </section>
+
+    <section class="crearPersonaje d-none">
+      <h1 class="text-secondary text-center mt-5">Crear personaje</h1>
+      <!-- gender image name status -->
+      <form class="container">
+        <div class="form-group">
+          <label class="col-form-label col-form-label-lg mt-4" for="nombre"
+            >Nombre</label
+          >
+          <input
+            class="form-control form-control-lg"
+            type="text"
+            placeholder="Introduce nombre"
+            id="nombre"
+          />
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg mt-4" for="imagen"
+              >Imagen</label
+            >
+            <input
+              class="form-control form-control-lg"
+              type="text"
+              placeholder="Introduce url de la imagen"
+              id="imagen"
+            />
+          </div>
+          <div class="form-group">
+            <label class="col-form-label col-form-label-lg mt-4" for="estado"
+              >Estado vivo/muerto</label
+            >
+            <input
+              class="form-control form-control-lg"
+              type="text"
+              placeholder="Introduce el estado del personaje"
+              id="estado"
+            />
+          </div>
+          <div class="form-group">
+            <label class="col-form-label col-form-label-lg mt-4" for="genero"
+              >Género</label
+            >
+            <input
+              class="form-control form-control-lg"
+              type="text"
+              placeholder="Introduce el género del personaje"
+              id="genero"
+            />
+          </div>
+          <div class="d-grid gap-2 mt-5">
+            <button class="btn btn-lg btn-primary"id="crearPersonajeBtn" type="button">Crear Personaje</button>
+
+          </div>
+      </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
